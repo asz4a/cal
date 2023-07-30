@@ -77,7 +77,7 @@
             }
 
             // Calculate the final result
-            const finalResult = (assignmentResult * 0.25) + (examResult * 0.75);
+            const finalResult = (assignmentResult * 0.25 + examResult) * 0.75;
 
             // Display the final result
             document.getElementById('finalResult').textContent = `Final Result: ${finalResult.toFixed(2)}`;
