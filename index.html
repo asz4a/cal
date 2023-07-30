@@ -67,7 +67,7 @@
     <script>
         function calculateFinalResult() {
             // Get input values
-            const assignmentResult = parseFloat(document.getElementById('assignmentResult').value);
+            const assignmentResult = parseInt(document.getElementById('assignmentResult').value);
             const examResult = parseFloat(document.getElementById('examResult').value);
 
             // Check if the inputs are valid (within range 0-100)
@@ -77,8 +77,9 @@
             }
 
             // Calculate the final result
-            const finalResult = (assignmentResult * 0.25 + examResult) * 0.75;
-
+            const assiResult = assignmentResult * 0.25 ;
+            const exaResult = examResult * 0.75;
+            const finalResult = assiResult + exaResult;
             // Display the final result
             document.getElementById('finalResult').textContent = `Final Result: ${finalResult.toFixed(2)}`;
         }
